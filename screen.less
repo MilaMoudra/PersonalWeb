@@ -1,0 +1,212 @@
+@import url("normalize.css");
+
+// Variables
+@hp-nav-bgcolor: rgba(255, 255, 255, 0.8);
+@hp-nav-bgcolor-hover: rgba(50, 50, 50, 0.9);
+
+
+/* Fonts */
+@font-face {
+    font-family: 'Myriad Pro Semibold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Semibold'), url('fonts/MYRIADPRO-SEMIBOLD.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open Sans'), url('fonts/OpenSans-Regular.woff') format('woff');
+} 
+
+
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Regular'), url('fonts/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+
+/* Document CSS */
+
+body {
+	width: 100%;
+	font-size: 1rem;
+	font-family: 'Open-Sans';
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	text-align: center;
+	font-family: 'Exo 2';
+	& a:hover {
+		cursor:pointer;
+	}
+}
+
+.homepage {
+	background-image: url('images/abstract3.jpg');
+	background-size: cover;
+	& .name {
+		width: 25%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2.5rem;
+		font-size: 3rem;
+		font-weight: bold;
+		font-family: 'Myriad Pro Semibold';
+		text-align: center;
+		color: rgba(255, 255, 255, 0.8);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+		&__description {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			margin-top: .7rem;
+			margin-bottom: 6rem;
+			font-family: 'Exo 2';
+			font-size: 1.1rem;
+			font-style: italic;
+			font-weight: 500;
+			color: #fff;
+		}
+	}
+	& nav {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	& .nav {
+		&--homepage {
+			width: 7.5rem;
+			height: 7.5rem;
+			background-color: @hp-nav-bgcolor;
+			transition: background 1000ms, color 800ms, box-shadow 1000ms;
+			color: #000;
+			border-radius: 50%;
+			display: inline-block;
+			-webkit-box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.5);
+			-moz-box-shadow:    7px 7px 13px 0px rgba(50, 50, 50, 0.5);
+			box-shadow:         7px 7px 13px 0px rgba(50, 50, 50, 0.5);
+			& div {
+				margin-top: 35%;
+			}
+			&:hover {
+				background-color: @hp-nav-bgcolor-hover;
+				color: #fff;
+				-webkit-box-shadow: none;
+				-moz-box-shadow:    none;
+				box-shadow:         none;
+			}
+		}
+		&__bio {
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 3.5rem;
+		}
+		&__work {
+			margin-right: 10rem;
+		}	
+
+	}
+}
+
+
+.subpage {
+	& .name {
+		text-align: center;
+		//border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		letter-spacing: .5rem;
+		width: 8.5rem;
+		&__wrapper {
+			color: rgba(255, 255, 255, 0.8);
+			font-weight: 100;
+			font-family: 'Exo 2';
+			font-size: 1.2rem;
+			padding: 1.3rem 1rem .5rem 1rem;
+			& a {
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+	& nav {
+		width: 7rem;
+		padding: 3rem 1rem;
+		display: inline-block;
+		float: left;
+		height: 100vh;
+		font-size: 1.3rem;
+		font-weight: 600;
+	}
+	& .nav { 
+		&--subpage {
+			width: 5.5rem;
+			height: 5.5rem;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 3rem;
+			transition: background 1000ms, color 800ms, border 1000ms;
+			color: rgba(255, 255, 255, 0.8);
+			border-radius: 50%;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.8);
+				color: #99cc00;
+				border: 2px solid #99cc00;
+			}
+			& div {
+				display: inline-block;
+				margin-top: 35%;
+			}
+		}
+		&--active {
+			transition: none;
+			background-color: rgba(0, 0, 0, 0.8);
+			color: #99cc00;
+			border: 2px solid #99cc00;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.8);
+				color: #99cc00;
+			}
+		}
+	}
+	& .content {
+		width: 40rem;
+		color: #fff;
+		padding: 2rem 3rem;
+		margin-left: 0;
+		display: inline-block;
+		font-family: 'Exo 2';
+		font-weight: 500;
+		&__wrapper {
+			width: 55rem;
+			-webkit-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow:    5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+			box-shadow:         5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
+}
+
+
+.bio {
+	background-image: url('images/Prague.jpg');
+	background-size: cover;
+}
+
+.hobbies {
+	background-image: url('images/glider.jpg');
+	background-size: cover;
+}
+
+.work {
+	background-image: url('images/abstract2.jpg');
+	background-size: cover;
+}
