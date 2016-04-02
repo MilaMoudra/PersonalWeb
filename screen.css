@@ -19,13 +19,32 @@
   src: local('Myriad Pro Regular'), url('fonts/MYRIADPRO-REGULAR.woff') format('woff');
 }
 /* Document CSS */
+@-ms-viewport {
+  width: device-width;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
 body {
   width: 100%;
   font-size: 1rem;
   font-family: 'Open-Sans';
+  background-color: #000;
 }
 a {
   text-decoration: none;
+}
+h1 {
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.1rem;
+}
+em {
+  font-weight: 600;
 }
 nav {
   text-align: center;
@@ -35,7 +54,10 @@ nav a:hover {
   cursor: pointer;
 }
 .homepage {
-  background-image: url('images/abstract3.jpg');
+  background: url('images/abstract3crop.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .homepage .name {
@@ -47,7 +69,7 @@ nav a:hover {
   font-weight: bold;
   font-family: 'Myriad Pro Semibold';
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 .homepage .name__description {
@@ -56,12 +78,12 @@ nav a:hover {
   margin-right: auto;
   text-align: center;
   margin-top: .7rem;
-  margin-bottom: 6rem;
   font-family: 'Exo 2';
   font-size: 1.1rem;
   font-style: italic;
-  font-weight: 500;
-  color: #fff;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 3px #000000;
 }
 .homepage nav {
   width: 50%;
@@ -69,6 +91,7 @@ nav a:hover {
   margin-right: auto;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-top: 10%;
 }
 .homepage .nav--homepage {
   width: 7.5rem;
@@ -102,8 +125,8 @@ nav a:hover {
 }
 .subpage .name {
   text-align: center;
-  letter-spacing: .5rem;
   width: 8.5rem;
+  letter-spacing: .5rem;
 }
 .subpage .name__wrapper {
   color: rgba(255, 255, 255, 0.8);
@@ -130,14 +153,15 @@ nav a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
-  transition: background 1000ms, color 800ms, border 1000ms;
+  transition: background 300ms, color 300ms, border 300ms;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .subpage .nav--subpage:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  color: #99cc00;
-  border: 2px solid #99cc00;
 }
 .subpage .nav--subpage div {
   display: inline-block;
@@ -146,12 +170,6 @@ nav a:hover {
 .subpage .nav--active {
   transition: none;
   background-color: rgba(0, 0, 0, 0.8);
-  color: #99cc00;
-  border: 2px solid #99cc00;
-}
-.subpage .nav--active:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #99cc00;
 }
 .subpage .content {
   width: 40rem;
@@ -167,17 +185,95 @@ nav a:hover {
   -webkit-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .bio {
-  background-image: url('images/Prague.jpg');
+  background: url('images/abstract2_3_1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+}
+.bio .nav--subpage:hover {
+  color: #ff8080;
+  border: 2px solid #ff8080;
+}
+.bio .nav--active {
+  color: #ff8080;
+  border: 2px solid #ff8080;
+}
+.bio .nav--active:hover {
+  color: #ff8080;
+}
+.bio .content a {
+  color: #ff8080;
+  font-weight: bolder;
+}
+.bio .content a:hover {
+  color: #ff8080;
+}
+.bio .content a:visited {
+  color: #ff8080;
+}
+.bio__item p {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+.bio__item p:first-of-type {
+  font-weight: bold;
+  margin-top: 2rem;
 }
 .hobbies {
-  background-image: url('images/glider.jpg');
+  background: url('images/glider1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
+.hobbies .nav--subpage:hover {
+  color: #0099cc;
+  border: 2px solid #0099cc;
+}
+.hobbies .nav--active {
+  color: #0099cc;
+  border: 2px solid #0099cc;
+}
+.hobbies .nav--active:hover {
+  color: #0099cc;
+}
+.hobbies .content a {
+  color: #0099cc;
+  font-weight: bold;
+}
+.hobbies .content a:hover {
+  color: #0099cc;
+}
+.hobbies .content a:visited {
+  color: #0099cc;
+}
 .work {
-  background-image: url('images/abstract2.jpg');
+  background: url('images/abstract4_1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+}
+.work .nav--subpage:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #99cc00;
+  border: 2px solid #99cc00;
+}
+.work .nav--active {
+  color: #99cc00;
+  border: 2px solid #99cc00;
+}
+.work .content a {
+  color: #99cc00;
+  font-weight: bold;
+}
+.work .content a:hover {
+  color: #99cc00;
+}
+.work .content a:visited {
+  color: #99cc00;
 }

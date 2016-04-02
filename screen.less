@@ -3,6 +3,10 @@
 // Variables
 @hp-nav-bgcolor: rgba(255, 255, 255, 0.8);
 @hp-nav-bgcolor-hover: rgba(50, 50, 50, 0.9);
+@bio-color: #ff8080;
+@work-color: #99cc00;
+@hobbies-color: #0099cc;
+
 
 
 /* Fonts */
@@ -30,15 +34,36 @@
 
 
 /* Document CSS */
+@-ms-viewport { 
+  width: device-width; 
+}
+
+*, *:before, *:after {
+  	-webkit-box-sizing: inherit;
+  	-moz-box-sizing: inherit;
+  	box-sizing: inherit;
+}
+
 
 body {
 	width: 100%;
 	font-size: 1rem;
 	font-family: 'Open-Sans';
+	background-color: #000;
 }
 
 a {
 	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.2rem;
+	margin-top: 2.5rem;
+	margin-bottom: 1.1rem;
+}
+
+em {
+	font-weight: 600;
 }
 
 nav {
@@ -50,8 +75,11 @@ nav {
 }
 
 .homepage {
-	background-image: url('images/abstract3.jpg');
-	background-size: cover;
+	background: url('images/abstract3crop.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	& .name {
 		width: 25%;
 		margin-left: auto;
@@ -61,20 +89,21 @@ nav {
 		font-weight: bold;
 		font-family: 'Myriad Pro Semibold';
 		text-align: center;
-		color: rgba(255, 255, 255, 0.8);
+		color: rgba(255, 255, 255, 0.9);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+		//@media(max-width:840px)
 		&__description {
 			width: 80%;
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
 			margin-top: .7rem;
-			margin-bottom: 6rem;
 			font-family: 'Exo 2';
 			font-size: 1.1rem;
 			font-style: italic;
-			font-weight: 500;
-			color: #fff;
+			font-weight: 700;
+			color: rgba(255, 255, 255, 0.9);
+			text-shadow: 1px 1px 3px #000000;
 		}
 	}
 	& nav {
@@ -83,6 +112,7 @@ nav {
 		margin-right: auto;
 		font-size: 1.5rem;
 		font-weight: 600;
+		margin-top: 10%;
 	}
 	& .nav {
 		&--homepage {
@@ -123,9 +153,8 @@ nav {
 .subpage {
 	& .name {
 		text-align: center;
-		//border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-		letter-spacing: .5rem;
 		width: 8.5rem;
+		letter-spacing: .5rem;
 		&__wrapper {
 			color: rgba(255, 255, 255, 0.8);
 			font-weight: 100;
@@ -153,13 +182,14 @@ nav {
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 3rem;
-			transition: background 1000ms, color 800ms, border 1000ms;
+			transition: background 300ms, color 300ms, border 300ms;
 			color: rgba(255, 255, 255, 0.8);
 			border-radius: 50%;
+			-moz-box-sizing:border-box;
+	    -webkit-box-sizing:border-box;
+	    box-sizing:border-box;
 			&:hover {
 				background-color: rgba(0, 0, 0, 0.8);
-				color: #99cc00;
-				border: 2px solid #99cc00;
 			}
 			& div {
 				display: inline-block;
@@ -169,12 +199,6 @@ nav {
 		&--active {
 			transition: none;
 			background-color: rgba(0, 0, 0, 0.8);
-			color: #99cc00;
-			border: 2px solid #99cc00;
-			&:hover {
-				background-color: rgba(0, 0, 0, 0.8);
-				color: #99cc00;
-			}
 		}
 	}
 	& .content {
@@ -190,23 +214,121 @@ nav {
 			-webkit-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
 			-moz-box-shadow:    5px 0px 20px 0px rgba(0, 0, 0, 0.5);
 			box-shadow:         5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-			background-color: rgba(0, 0, 0, 0.8);
+			background-color: rgba(0, 0, 0, 0.9);
 		}
 	}
 }
 
 
 .bio {
-	background-image: url('images/Prague.jpg');
-	background-size: cover;
+	background: url('images/abstract2_3_1.jpg')no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	    & .nav {
+  	&--subpage {
+			&:hover {
+				color: @bio-color;
+				border: 2px solid @bio-color;
+		  }
+		}
+		&--active {
+			color: @bio-color;
+			border: 2px solid @bio-color;
+			&:hover {
+				color: @bio-color;
+			}
+		}
+	}
+	& .content {
+		& a {
+			color: @bio-color;
+			font-weight: bolder;
+			&:hover {
+				color: @bio-color;
+			}
+			&:visited {
+				color: @bio-color;
+			}
+		}
+	}
+	&__item {
+		& p {
+			margin-top: .5rem;
+			margin-bottom: .5rem;
+			&:first-of-type {
+				font-weight: bold;
+				margin-top: 2rem;
+			}
+		}
+	}
 }
 
 .hobbies {
-	background-image: url('images/glider.jpg');
-	background-size: cover;
+	background: url('images/glider1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  & .nav {
+  	&--subpage {
+			&:hover {
+				color: @hobbies-color;
+				border: 2px solid @hobbies-color;
+		  }
+		}
+		&--active {
+			color: @hobbies-color;
+			border: 2px solid @hobbies-color;
+			&:hover {
+				color: @hobbies-color;
+			}
+		}
+	}
+	& .content {
+		& a {
+			color: @hobbies-color;
+			font-weight: bold;
+			&:hover {
+				color: @hobbies-color;
+			}
+			&:visited {
+				color: @hobbies-color;
+			}
+		}
+	}
 }
 
 .work {
-	background-image: url('images/abstract2.jpg');
-	background-size: cover;
+	background: url('images/abstract4_1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  & .nav {
+  	&--subpage { 
+	    &:hover {
+				background-color: rgba(0, 0, 0, 0.8);
+				color: @work-color;
+				border: 2px solid @work-color;
+			}
+		}
+		&--active {
+			color: @work-color;
+			border: 2px solid @work-color;
+		}
+	}
+	& .content {
+		& a {
+			color: @work-color;
+			font-weight: bold;
+			&:hover {
+				color: @work-color;
+			}
+			&:visited {
+				color: @work-color;
+			}
+		}
+	}
 }
