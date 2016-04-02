@@ -40,8 +40,9 @@ a {
 }
 h1 {
   font-size: 1.2rem;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   margin-bottom: 1.1rem;
+  font-style: italic;
 }
 em {
   font-weight: 600;
@@ -52,6 +53,15 @@ nav {
 }
 nav a:hover {
   cursor: pointer;
+}
+.notice {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 2.8rem;
+}
+.intro {
+  font-size: 1.15rem;
+  text-align: justify;
 }
 .homepage {
   background: url('images/abstract3crop.jpg') no-repeat center center fixed;
@@ -123,17 +133,23 @@ nav a:hover {
 .homepage .nav__work {
   margin-right: 10rem;
 }
+.subpage__wrapper {
+  display: inline-block;
+  float: left;
+}
 .subpage .name {
   text-align: center;
-  width: 8.5rem;
   letter-spacing: .5rem;
+  display: inline-block;
 }
 .subpage .name__wrapper {
   color: rgba(255, 255, 255, 0.8);
   font-weight: 100;
   font-family: 'Exo 2';
   font-size: 1.2rem;
-  padding: 1.3rem 1rem .5rem 1rem;
+  width: 7rem;
+  display: inline-block;
+  padding: 1.5rem 0 0 1.7rem;
 }
 .subpage .name__wrapper a {
   color: rgba(255, 255, 255, 0.8);
@@ -141,8 +157,6 @@ nav a:hover {
 .subpage nav {
   width: 7rem;
   padding: 3rem 1rem;
-  display: inline-block;
-  float: left;
   height: 100vh;
   font-size: 1.3rem;
   font-weight: 600;
@@ -174,7 +188,7 @@ nav a:hover {
 .subpage .content {
   width: 40rem;
   color: #fff;
-  padding: 2rem 3rem;
+  padding: .2rem 3rem 2rem 3rem;
   margin-left: 0;
   display: inline-block;
   font-family: 'Exo 2';
@@ -218,10 +232,19 @@ nav a:hover {
 .bio__item p {
   margin-top: .5rem;
   margin-bottom: .5rem;
+  padding-left: 1.1rem;
 }
 .bio__item p:first-of-type {
   font-weight: bold;
   margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid #ff8080;
+}
+.bio__item p:first-of-type span {
+  text-align: right;
+  float: right;
+  font-weight: 300;
+  font-size: .9rem;
 }
 .hobbies {
   background: url('images/glider1.jpg') no-repeat center center fixed;
