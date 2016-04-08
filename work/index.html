@@ -13,20 +13,41 @@
 	<!-- jQuery library -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-	<!-- FancyBox -->
+	<!-- FancyBox-->
+	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<!-- FancyBox thumbnail helper -->
+	<link rel="stylesheet" href="../fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<!-- FancyBox init -->
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$(".fancybox").fancybox();
+			$(".fancybox-thumb").fancybox({
+				padding : 0,
+				prevEffect	: 'none',
+				nextEffect	: 'none',
+				helpers	: {
+					title	: {
+						type: 'outside'
+					},
+					thumbs	: {
+						width	: 50,
+						height	: 50
+					},
+					overlay : {
+          	css : {
+            	'background' : 'rgba(0, 0, 0, 0.8)'
+            }
+					}
+				}
+       });
 		});
 	</script>
-	
-	<!-- FancyBox thumbnail helper -->
-	<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
 	<title>Milada Moudrá</title>
 </head>
 <body class="subpage work">
+
 	<div class="content__wrapper">
 		<div class="subpage__wrapper">
 			<header><div class="name__wrapper"><a href=".."><div class="name">Milada Moudrá</div></a></div></header>
@@ -34,14 +55,14 @@
 				<div class="nav--subpage nav__work nav--active">
 					<div>work</div>
 				</div>
-				<a href="../bio">
-					<div class="nav--subpage nav__bio">
-						<div>bio</div>
-					</div>
-				</a>
 				<a href="../hobbies">
 					<div class="nav--subpage  nav__hobby">
 						<div>hobbies</div>
+					</div>
+				</a>				
+				<a href="../bio">
+					<div class="nav--subpage nav__bio">
+						<div>bio</div>
 					</div>
 				</a>
 			</nav>
@@ -55,35 +76,54 @@
 			</p>
 			<div class="work__item">
 				<h1>Coding and Programming</h1>
-				<p>I am mostly self-taught aspiring front-end developer with expertise in HTML5 and CSS3, basics of Javascript and experience with PHP (Nette framework) and SQL/MySQL. I use CSS preprocessors (Less) and Grunt.js.</p>
-				<p>Although oriented on web development, I am also familiar with programming in C and Shell scripting.
+				<p>I am mostly self-taught aspiring <strong>front-end developer</strong> with expertise in <strong>HTML5 and CSS3</strong>, basics of Javascript and experience with <strong>PHP</strong> (<strong>Nette</strong> framework) and <strong>SQL/MySQL</strong>. I aim for responsivity and use CSS preprocessors (Less) and Grunt.js in development.</p>
+				<p>Although oriented on web development, I am also familiar with <strong>programming in C and Shell scripting</strong>.
 				</p>
 				<p><a href="https://github.com/MilaMoudra/">GitHub</a>
 				<br />
-				<a href="http://www.skyquality.cz">SkyQuality.cz/com</a> &ndash; Nette based project, my responsibility was complete front-end design and coding and about 20% of back-end programming.</p>
+				<a href="http://www.skyquality.cz">SkyQuality.cz/com</a> &ndash; Nette based project, my responsibility was complete design and coding of the front-end and about 20% of back-end programming.</p>
 			</div>
 			<div class="work__item">
 				<h1>Desktop Publishing</h1>
 				
-				<p>I have experience in preparation of numerous promotional materials in various styles, ranging from largely graphical and visually striking works &ndash; leaflets, banners, rollups &ndash; to mainly textual &ndash; articles, reports, books.
+				<p>I have experience in preparation of numerous <strong>promotional materials</strong> in various styles, ranging from largely graphical and <strong>visually striking</strong> works such as leaflets, banners and rollups, to mainly textual &ndash; articles, reports, books.
 				</p>
 				<p>
-				I create with Adobe InDesign, LyX (LaTeX-based document processor), Inkscape, GIMP and other software.
+				I create with <strong>Adobe InDesign</strong>, LyX (<strong>LaTeX</strong>-based document processor), Inkscape, GIMP and other software.
 				</p>
-				<p>Obrazky a odkazy</p>
-			</div>
-			<div class="work__item">
-				<h1>
-				Project Realization and Fundraising
-				</h1>
-				<p>I have been member and leader of several projects with full responsibility for their funding, realization and administration. More on <a href="../bio#projects">particular projects</a>.
+				<p class="image__container">
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/bares_jones.jpg" title="Article in popularization astronomy journal &ndash; complete DTP including maps"><span class="image__single"><img src="../images/content/bares_jones.jpg" title="Article in popularization astronomy journal &ndash; complete DTP including maps" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/Broz_Merkur.jpg" title="Article in popularization astronomy journal" ><span class="image__single"><img src="../images/content/Broz_Merkur.jpg" title="Article in popularization astronomy journal" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/inzerce.jpg" title="Advertisement in trade show booklet &ndash; complete design and DTP" ><span class="image__single"><img src="../images/content/inzerce.jpg" title="Advertisement in trade show booklet &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/WLM_letak_A4.jpg" title="A4 banner for photocontest &ndash; complete design and DTP" ><span class="image__single"><img src="../images/content/WLM_letak_A4.jpg" title="A4 banner for photocontest &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/Nabidka_Partnerum.jpg" title="Cooperation proposal for prospective partners &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/Nabidka_Partnerum.jpg" title="Cooperation proposal for prospective partners &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/Vystava_popisek.jpg" title="Photography exhibition, display caption &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/Vystava_popisek.jpg" title="Photography exhibition, display caption &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/brozura5.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/brozura5.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP" /></a></span></a>		
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/brozura2.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/brozura2.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/brozura4.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/brozura4.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/brozura3.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/brozura3.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/mapa_FZU.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/mapa_FZU.png" title="Activity report of Institute of Physics, 250 pages &ndash; complete design and DTP" /></a></span></a>
+					<a class="fancybox-thumb" rel="dtp" href="../images/content/roll-up_x.jpg" title="Rollup 200×85 cm &ndash; complete design and DTP"><span class="image__single"><img src="../images/content/roll-up_x.jpg" title="Rollup 200×85 cm &ndash; complete design and DTP" /></a></span></a>
 				</p>
 			</div>
 			<div class="work__item">
 				<h1>GIS and field research, light pollution expert</h1>
-				<p>Satellite image processing and analysis in ArcGIS, field research on the topic of night envrionment protection, including reports for public organizations. Participation in international conferences on artificial light at night, meetings with local and regional decision-makers, technological experts.
+				<p>Satellite image processing and analysis in <strong>ArcGIS</strong>, field research and measurements on the topic of night environment protection, including <strong>popularization and reports</strong> for public organizations. Participation in international conferences on artificial light at night, talks with <strong>local and regional decision-makers, technological experts and press</strong>.
 				</p>
-				<p>Obrazky a odkazy</p>
+				<p class="image__container">
+					<a class="fancybox-thumb" rel="gis" href="../images/content/tokan.jpg" title="Processed all-sky image from evaluated national park. Milky Way is clearly visible and color range states sky brightness in comparison to pristine night skies."><span class="image__single"><img src="../images/content/tokan.jpg" title="Processed all-sky image from evaluated national park. Milky Way is clearly visible and color range states sky brightness in comparison to pristine night skies." /></a></span></a>
+					<a class="fancybox-thumb" rel="gis" href="../images/content/tokan_real_m.jpg" title="Unprocessed all-sky image from evaluated national park with Milky way clearly visible"><span class="image__single"><img src="../images/content/tokan_real_m.jpg" title="Unprocessed all-sky image from evaluated national park with Milky way clearly visible" /></a></span></a>
+					<a class="fancybox-thumb" rel="gis" href="../images/content/Zare_CR.png" title="Map of the Czech Republic showing the amount of upward directed light &ndash; processed NPP Suomi satellite image. Original data processing by NOAA's National Geophysical Data Center."><span class="image__single"><img src="../images/content/Zare_CR.png" title="Map of the Czech Republic showing the amount of upward directed light &ndash; processed NPP Suomi satellite image. Original data processing by NOAA's National Geophysical Data Center." /></a></span></a>
+					<a class="fancybox-thumb" rel="gis" href="../images/content/Cesky_kras_map.png" title="Map of protected area showing the amount of upward directed light &ndash; processed NPP Suomi satellite image. Original data processing by NOAA's National Geophysical Data Center."><span class="image__single"><img src="../images/content/Cesky_kras_map.png" title="Map of protected area showing the amount of upward directed light &ndash; processed NPP Suomi satellite image. Original data processing by NOAA's National Geophysical Data Center." /></a></span></a>
+					<a class="fancybox-thumb" rel="gis" href="../images/content/blue-marblex.png" title="Map of Central and Western Europe showing the amount of upward directed light &ndash; processed NPP Suomi satellite image. Original data processing by NOAA's National Geophysical Data Center."><span class="image__single"><img src="../images/content/blue-marblex.png" title="Map of Central and Western Europe showing the amount of upward directed light &ndash; processed NPP Suomi satellite image. Original data processing by NOAA's National Geophysical Data Center." /></a></span></a>
+				</p>
+			</div>			
+			<div class="work__item">
+				<h1>
+				Project Realization and Fundraising
+				</h1>
+				<p>I have been member and leader of several projects with <strong>full responsibility for their funding, realization and administration</strong>. More on <a href="../bio#projects">particular projects</a>.
+				</p>
 			</div>
 			<div class="work__item">
 				<h1>
@@ -99,11 +139,11 @@
 				German
 				</h2>
 				<p>
-				Graduate of B2 level professional language course at Technische Universitat Berlin.
+				Graduate of <strong>B2 level</strong> professional language course at Technische Universität Berlin.
 				<p>
 			</div>
 		</div>
-		<footer></footer>
+		<footer>Background image: Isengardt, CC-BY-SA 2.0 (edited)</footer>
 		</div>
 </body>
 </html>

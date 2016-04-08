@@ -10,20 +10,39 @@
 
 	<!-- Google Analytics -->
 
-	<!-- jQuery library -->
+<!-- jQuery library -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-	<!-- FancyBox -->
+	<!-- FancyBox-->
+	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<!-- FancyBox thumbnail helper -->
+	<link rel="stylesheet" href="../fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<!-- FancyBox init -->
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$(".fancybox").fancybox();
+			$(".fancybox-thumb").fancybox({
+				padding : 0,
+				prevEffect	: 'none',
+				nextEffect	: 'none',
+				helpers	: {
+					title	: {
+						type: 'outside'
+					},
+					thumbs	: {
+						width	: 50,
+						height	: 50
+					},
+					overlay : {
+          	css : {
+            	'background' : 'rgba(0, 0, 0, 0.8)'
+            }
+					}
+				}
+       });
 		});
 	</script>
-	
-	<!-- FancyBox thumbnail helper -->
-	<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
 	<title>Milada Moudrá</title>
 </head>
 <body class="subpage hobbies">
@@ -34,28 +53,37 @@
 			<div class="nav--subpage nav__hobby nav--active">
 				<div>hobbies</div>
 			</div>
-			<a href="../work">
-				<div class="nav--subpage nav__work">
-					<div>work</div>
-				</div>
-			</a>
 			<a href="../bio">
 				<div class="nav--subpage  nav__bio">
 					<div>bio</div>
 				</div>
 			</a>
+			<a href="../work">
+				<div class="nav--subpage nav__work">
+					<div>work</div>
+				</div>
+			</a>
 		</nav>
 		</div>div>
 		<div class="content" role="main">
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Integer imperdiet lectus quis justo. Nullam sit amet magna in magna gravida vehicula. In enim a arcu imperdiet malesuada. Maecenas aliquet accumsan leo. Vivamus ac leo pretium faucibus. Suspendisse sagittis ultrices augue. Nullam dapibus fermentum ipsum. Aliquam erat volutpat. Maecenas sollicitudin. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.</p>
-
-<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Integer pellentesque quam vel velit. Sed convallis magna eu sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum fermentum tortor id mi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Duis condimentum augue id magna semper rutrum. Proin in tellus sit amet nibh dignissim sagittis. Aliquam erat volutpat. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Etiam egestas wisi a erat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Aliquam id dolor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur vitae diam non enim vestibulum interdum. Aliquam in lorem sit amet leo accumsan lacinia.</p>
-
-<p>Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Etiam bibendum elit eget erat. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Etiam neque. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Quisque porta. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Vivamus luctus egestas leo. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Phasellus faucibus molestie nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer lacinia. Nullam dapibus fermentum ipsum. Etiam neque. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Sed ac dolor sit amet purus malesuada congue. Etiam commodo dui eget wisi.</p>
-
-<p>Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Phasellus faucibus molestie nisl. Praesent dapibus. Nullam sit amet magna in magna gravida vehicula. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Aliquam ante. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Et harum quidem rerum facilis est et expedita distinctio. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Phasellus faucibus molestie nisl. Maecenas libero. Fusce nibh. Curabitur bibendum justo non orci. Vivamus luctus egestas leo.</p>
-		</div>
-		<footer></footer>
+			<p class="notice"></p>
+			<h1>Astronomy</h1>
+			<p>Since high school, my main interest has been <strong>astronomy</strong> (please <strong>don't</strong> confuse it with astrology which is absolute quackery) and <strong>night sky observing</strong>, both visual and photographic. </p>
+			<p>I have two main specializations, <strong>deep sky astronomy and variable star observing</strong>. The former is focused on observing of galaxies, nebulae and other deep sky objects (DSO). These objects are <strong>especially challenging</strong> for observers due to their low brightness and fuzziness. On the other hand, once you spot them, it's very satisfying &ndash; you can explore the <strong>dust structures in vast star-birth regions, billion-star spiral arms of galaxies and dark lagoons inside tiny planetary nebulae</strong>,remnants of dying stars.</p>
+			<p>Unlike deep sky objects, variable stars look often almost identical on the first sight and their observing is nowadays done almost exclusively with <strong>digital imaging techniques</strong>. The telescope is equiped with CCD camera (optionally with filters) and powered mount that follows the selected star throughout the night. At the end of the night you get a <strong>set of hundreds of images</strong> and once you process them, you get the <strong>light curve</strong> &ndash; graph showing change of star brightness in time. From the graph (more from a lot of them!) you can determine the type of variability, origin of variability (eclipses, pulsations, multiple star system, black hole, ...) and even <strong>discover a new variable star</strong> &ndash; I've had a luck to catch a two of them :)</p>
+			<p>I'm a proud member of the <a href="http://www.astro.cz" title="Czech Astronomical Society">Czech Astronomical Society</a>.</p>
+			<p class="image__container">
+					<a class="fancybox-thumb" rel="astronomy" href="../images/content/litice.jpg" title="Night sky observing with my 10″ dobsonian telescope at starparty at Litice Castle."><span class="image__single"><img src="../images/content/litice.jpg" title="Night sky observing with my 10″ dobsonian telescope at starparty at Litice Castle. Photo © Martin Mašek" /></a></span></a>
+					<a class="fancybox-thumb" rel="astronomy" href="../images/content/observing.jpg" title="Evening preparations for variable star observations from our rooftop in Prague"><span class="image__single"><img src="../images/content/observing.jpg" title="Evening preparations for variable star observations from our rooftop in Prague" /></a></span></a>
+					<a class="fancybox-thumb" rel="astronomy" href="../images/content/variable.gif" title="Light curve of eclipsing variable star"><span class="image__single"><img src="../images/content/variable.gif" title="Light curve of eclipsing variable star" /></a></span></a>
+					<a class="fancybox-thumb" rel="astronomy" href="../images/content/exoplanet.gif" title="Light curve of exoplanet transiting over the disc of its mother star"><span class="image__single"><img src="../images/content/exoplanet.gif" title="Light curve of exoplanet transiting over the disc of its mother star" /></a></span></a>
+			<h1>Gliding</h1>
+			<p>Aside from astronomy is most of my spare time dedicated to flying, particularly with unpowered aircrafts, so called gliders/sailplanes. I obtained my pilot license in autumn 2015 in <a href="http://www.hodkovice.info" title="AK Hodkovice" >AK Hodkovice</a> and I look forward to some great cross-country flights in next seasons!</p>
+			<p class="image__container">
+					<a class="fancybox-thumb" rel="gliding" href="../images/content/k8b.jpeg" title="After my first solo flights in one-seater (Ka8b). Photo © Dušan Kotyk"><span class="image__single"><img src="../images/content/k8b.jpeg" title="After my first solo flights in one-seater (Ka8b). Photo © Dušan Kotyk" /></a></span></a>
+					<a class="fancybox-thumb" rel="gliding" href="../images/content/gliding.jpg" title="Early spring thermal soaring"><span class="image__single"><img src="../images/content/gliding.jpg" title="Early spring thermal soaring" /></a></span></a>
+			</div>
+		<footer>Background image: Noel Reynolds, CC-BY-SA 2.0 (edited)</footer>
 		</div>
 </body>
 </html>

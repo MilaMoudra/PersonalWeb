@@ -63,6 +63,40 @@ nav {
 nav a:hover {
   cursor: pointer;
 }
+.contact {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  text-align: center;
+  letter-spacing: .08rem;
+  font-size: 1rem;
+  font-family: 'Exo 2';
+  text-shadow: 1px 1px 3px #000000, 1px 1px 2px #000000;
+  transition: font-size 900ms;
+}
+.contact a {
+  color: rgba(255, 255, 255, 0.95);
+}
+.contact a:hover {
+  color: #fff;
+  font-size: 1.1rem;
+}
+@media (min-height: 700px) {
+  .contact {
+    width: 100%;
+    position: absolute;
+    bottom: 2rem;
+  }
+}
+footer {
+  text-align: right;
+  color: #ddd;
+  font-size: .7rem;
+  font-family: 'Exo 2';
+  font-style: italic;
+  padding-right: 2rem;
+}
 .notice {
   font-size: 1.25rem;
   font-weight: 800;
@@ -73,17 +107,50 @@ nav a:hover {
   text-align: justify;
 }
 .homepage {
-  background: url('images/abstract3crop.jpg') no-repeat center center fixed;
+  background: url('images/home_2560.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media (max-width: 1500px) {
+  .homepage {
+    background: url('images/home_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .homepage {
+    background: url('images/home_2560.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px) {
+  .homepage {
+    background: url('images/home_1000.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .homepage {
+    background: url('images/home_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
 }
 .homepage .name {
   width: 25%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2.5rem;
+  padding-bottom: .7rem;
   font-size: 3rem;
   font-weight: bold;
   font-family: 'Myriad Pro Semibold';
@@ -91,12 +158,27 @@ nav a:hover {
   color: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 1260px) {
+  .homepage .name {
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .homepage .name {
+    width: 60%;
+  }
+}
+@media (max-width: 540px) {
+  .homepage .name {
+    width: 80%;
+  }
+}
 .homepage .name__description {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: .7rem;
+  margin-top: .5rem;
   font-family: 'Exo 2';
   font-size: 1.1rem;
   font-style: italic;
@@ -112,6 +194,17 @@ nav a:hover {
   font-weight: 600;
   margin-top: 10%;
 }
+@media (max-width: 840px) {
+  .homepage nav {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+@media (max-width: 540px) {
+  .homepage nav {
+    margin-top: 20%;
+  }
+}
 .homepage .nav--homepage {
   width: 7.5rem;
   height: 7.5rem;
@@ -125,7 +218,7 @@ nav a:hover {
   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.5);
 }
 .homepage .nav--homepage div {
-  margin-top: 35%;
+  margin-top: 38%;
 }
 .homepage .nav--homepage:hover {
   background-color: rgba(50, 50, 50, 0.9);
@@ -142,14 +235,28 @@ nav a:hover {
 .homepage .nav__work {
   margin-right: 10rem;
 }
+.subpage {
+  width: 100%;
+}
 .subpage__wrapper {
   display: inline-block;
   float: left;
+}
+@media (max-width: 640px) {
+  .subpage__wrapper {
+    display: block;
+    float: none;
+  }
 }
 .subpage .name {
   text-align: center;
   letter-spacing: .5rem;
   display: inline-block;
+}
+@media (max-width: 640px) {
+  .subpage .name {
+    display: block;
+  }
 }
 .subpage .name__wrapper {
   color: rgba(255, 255, 255, 0.8);
@@ -163,12 +270,24 @@ nav a:hover {
 .subpage .name__wrapper a {
   color: rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 640px) {
+  .subpage .name__wrapper {
+    display: block;
+    width: 100%;
+  }
+}
 .subpage nav {
   width: 7rem;
   padding: 3rem 1rem;
-  height: 100vh;
   font-size: 1.3rem;
   font-weight: 600;
+}
+@media (max-width: 640px) {
+  .subpage nav {
+    display: block;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
 }
 .subpage .nav--subpage {
   width: 5.5rem;
@@ -183,6 +302,11 @@ nav a:hover {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media (max-width: 640px) {
+  .subpage .nav--subpage {
+    margin-bottom: 2rem;
+  }
+}
 .subpage .nav--subpage:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -194,7 +318,26 @@ nav a:hover {
   transition: none;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.subpage .content {
+.subpage .content__wrapper {
+  width: 55rem;
+  -webkit-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+@media (max-width: 940px) {
+  .subpage .content__wrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .subpage .content__wrapper {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.subpage .content__wrapper .content {
   width: 40rem;
   color: #fff;
   padding: .2rem 3rem 2rem 3rem;
@@ -203,19 +346,75 @@ nav a:hover {
   font-family: 'Exo 2';
   font-weight: 500;
 }
-.subpage .content__wrapper {
-  width: 55rem;
-  -webkit-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.9);
+@media (max-width: 940px) {
+  .subpage .content__wrapper .content {
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 940px) and (min-width: 890px) {
+  .subpage .content__wrapper .content {
+    width: 75%;
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 890px) and (min-width: 740px) {
+  .subpage .content__wrapper .content {
+    width: 70%;
+  }
+}
+@media (max-width: 740px) and (min-width: 640px) {
+  .subpage .content__wrapper .content {
+    width: 65%;
+  }
+}
+@media (max-width: 640px) {
+  .subpage .content__wrapper .content {
+    display: block;
+    width: 100vw;
+    padding-right: 0;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
 }
 .bio {
-  background: url('images/abstract2_3_1.jpg') no-repeat center center fixed;
+  width: 100%;
+  background: url('images/bio_3000.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media (max-width: 1500px) {
+  .bio {
+    background: url('images/bio_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .bio {
+    background: url('images/bio_3000.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px) {
+  .bio {
+    background: url('images/bio_1000.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .bio {
+    background: url('images/bio_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
 }
 .bio .nav--subpage:hover {
   color: #ff8080;
@@ -255,12 +454,51 @@ nav a:hover {
   font-weight: 300;
   font-size: .9rem;
 }
+@media (max-width: 800px) {
+  .bio__item p:first-of-type span {
+    display: block;
+    float: none;
+    text-align: left;
+  }
+}
 .hobbies {
-  background: url('images/glider1.jpg') no-repeat center center fixed;
+  background: url('images/hobbies_2683.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media (max-width: 1500px) {
+  .hobbies {
+    background: url('images/hobbies_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .hobbies {
+    background: url('images/hobbies_2683.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px) {
+  .hobbies {
+    background: url('images/hobbies_1000.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .hobbies {
+    background: url('images/hobbies_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
 }
 .hobbies .nav--subpage:hover {
   color: #0099cc;
@@ -284,11 +522,43 @@ nav a:hover {
   color: #0099cc;
 }
 .work {
-  background: url('images/abstract4_1_dark.jpg') no-repeat center center fixed;
+  background: url('images/work_3000.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media (max-width: 1500px) {
+  .work {
+    background: url('images/work_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .work {
+    background: url('images/work_3000.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px) {
+  .work {
+    background: url('images/work_1000.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+@media (max-width: 1000px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .work {
+    background: url('images/work_1500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
 }
 .work .nav--subpage:hover {
   background-color: rgba(0, 0, 0, 0.8);
@@ -308,4 +578,15 @@ nav a:hover {
 }
 .work .content a:visited {
   color: #99cc00;
+}
+.image__single {
+  overflow: hidden;
+  width: 6rem;
+  height: 6rem;
+}
+.image__single img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  height: 6rem;
+  width: 6rem;
 }

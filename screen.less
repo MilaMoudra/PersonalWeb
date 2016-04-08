@@ -85,6 +85,40 @@ nav {
 	}
 }
 
+.contact {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4rem;
+	text-align: center;
+	letter-spacing: .08rem;
+	font-size: 1rem;
+	font-family: 'Exo 2';
+	text-shadow: 1px 1px 3px #000000, 1px 1px 2px #000000;
+	transition: font-size 900ms;
+	& a {
+		color: rgba(255, 255, 255, 0.95);
+		&:hover {
+			color: #fff;
+			font-size: 1.1rem;
+		}
+	}
+	@media(min-height: 700px) {
+		width: 100%;
+		position: absolute;
+		bottom: 2rem;
+	}
+}
+
+footer {
+	text-align: right;
+	color: #ddd;
+	font-size: .7rem;
+	font-family: 'Exo 2';
+	font-style: italic;
+	padding-right: 2rem;
+}
+
 .notice {
 	font-size: 1.25rem;
 	font-weight: 800;
@@ -98,29 +132,62 @@ nav {
 }
 
 .homepage {
-	background: url('images/abstract3crop.jpg') no-repeat center center fixed; 
+	background: url('images/home_2560.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+	    @media(max-width: 1500px) {
+    	background: url('images/home_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1500px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/home_2560.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px) {
+    	background: url('images/home_1000.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/home_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
 	& .name {
 		width: 25%;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 2.5rem;
+		padding-bottom: .7rem;
 		font-size: 3rem;
 		font-weight: bold;
 		font-family: 'Myriad Pro Semibold';
 		text-align: center;
 		color: rgba(255, 255, 255, 0.9);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-		//@media(max-width:840px)
+		@media(max-width:1260px) {
+			width: 40%;
+		}
+		@media(max-width:800px) {
+			width: 60%;
+		}
+		@media(max-width:540px) {
+			width: 80%;
+		}
 		&__description {
 			width: 80%;
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
-			margin-top: .7rem;
+			margin-top: .5rem;
 			font-family: 'Exo 2';
 			font-size: 1.1rem;
 			font-style: italic;
@@ -136,6 +203,13 @@ nav {
 		font-size: 1.5rem;
 		font-weight: 600;
 		margin-top: 10%;
+		@media(max-width:840px) {
+			width: 100%;
+			margin-top: 15%;
+		}
+		@media(max-width:540px) {
+			margin-top: 20%;
+		}
 	}
 	& .nav {
 		&--homepage {
@@ -150,7 +224,7 @@ nav {
 			-moz-box-shadow:    7px 7px 13px 0px rgba(50, 50, 50, 0.5);
 			box-shadow:         7px 7px 13px 0px rgba(50, 50, 50, 0.5);
 			& div {
-				margin-top: 35%;
+				margin-top: 38%;
 			}
 			&:hover {
 				background-color: @hp-nav-bgcolor-hover;
@@ -174,14 +248,22 @@ nav {
 
 
 .subpage {
+	width: 100%;
 	&__wrapper {
 		display: inline-block;
 		float: left;
+		@media(max-width: 640px) {
+				display: block;
+				float: none;
+		}
 	}
 	& .name {
 		text-align: center;
 		letter-spacing: .5rem;
 		display: inline-block;
+		@media(max-width: 640px) {
+				display: block;
+		}
 		&__wrapper {
 			color: rgba(255, 255, 255, 0.8);
 			font-weight: 100;
@@ -193,14 +275,22 @@ nav {
 			& a {
 				color: rgba(255, 255, 255, 0.8);
 			}
+			@media(max-width: 640px) {
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 	& nav {
 		width: 7rem;
 		padding: 3rem 1rem;
-		height: 100vh;
 		font-size: 1.3rem;
 		font-weight: 600;
+		@media(max-width: 640px) {
+				display: block;
+				width: 100%;
+				padding-bottom: 1rem;
+		}
 	}
 	& .nav { 
 		&--subpage {
@@ -209,12 +299,15 @@ nav {
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 3rem;
+			@media(max-width: 640px) {
+				margin-bottom: 2rem;
+			}
 			transition: background 300ms, color 300ms, border 300ms;
 			color: rgba(255, 255, 255, 0.8);
 			border-radius: 50%;
 			-moz-box-sizing:border-box;
-	    -webkit-box-sizing:border-box;
-	    box-sizing:border-box;
+	   		-webkit-box-sizing:border-box;
+	    	box-sizing:border-box;
 			&:hover {
 				background-color: rgba(0, 0, 0, 0.8);
 			}
@@ -228,31 +321,84 @@ nav {
 			background-color: rgba(0, 0, 0, 0.8);
 		}
 	}
-	& .content {
-		width: 40rem;
-		color: #fff;
-		padding: .2rem 3rem 2rem 3rem;
-		margin-left: 0;
-		display: inline-block;
-		font-family: 'Exo 2';
-		font-weight: 500;
-		&__wrapper {
-			width: 55rem;
-			-webkit-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-			-moz-box-shadow:    5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-			box-shadow:         5px 0px 20px 0px rgba(0, 0, 0, 0.5);
-			background-color: rgba(0, 0, 0, 0.9);
+	& .content__wrapper {
+		width: 55rem;
+		-webkit-box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+		-moz-box-shadow:    5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+		box-shadow:         5px 0px 20px 0px rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0.9);
+		@media(max-width: 940px) {
+			width: 100%;
+		}
+		@media(max-width: 640px) {
+			width: 100%;
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+		& .content {
+			width: 40rem;
+			color: #fff;
+			padding: .2rem 3rem 2rem 3rem;
+			margin-left: 0;
+			display: inline-block;
+			font-family: 'Exo 2';
+			font-weight: 500;
+			@media(max-width: 940px) {
+					padding-right: 1.5rem;
+			}
+			@media(max-width: 940px) and (min-width: 890px) {
+					width: 75%;
+					padding-right: 1.5rem;
+			}
+			@media(max-width: 890px) and (min-width: 740px) {
+					width: 70%;
+			}
+			@media(max-width: 740px) and (min-width: 640px) {
+					width: 65%;
+			}
+			@media(max-width: 640px) {
+				display: block;
+				width: 100vw;
+				padding-right: 0;
+				padding-left: 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.3);
+			}
+			
 		}
 	}
 }
 
-
 .bio {
-	background: url('images/abstract2_3_1.jpg')no-repeat center center fixed; 
+	width: 100%;;
+	background: url('images/bio_3000.jpg')no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+	    @media(max-width: 1500px) {
+    	background: url('images/bio_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1500px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/bio_3000.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px) {
+    	background: url('images/bio_1000.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/bio_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
 	 & .nav {
   	&--subpage {
 			&:hover {
@@ -295,6 +441,11 @@ nav {
 					float: right;
 					font-weight: 300;
 					font-size: .9rem;
+					@media(max-width: 800px) {
+						display: block;
+						float: none;
+						text-align: left;
+					}
 				}
 			}
 		}
@@ -303,11 +454,35 @@ nav {
 
 
 .hobbies {
-	background: url('images/glider1.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: url('images/hobbies_2683.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    @media(max-width: 1500px) {
+    	background: url('images/hobbies_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1500px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/hobbies_2683.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px) {
+    	background: url('images/hobbies_1000.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/hobbies_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
   & .nav {
   	&--subpage {
 			&:hover {
@@ -338,11 +513,35 @@ nav {
 }
 
 .work {
-	background: url('images/abstract4_1_dark.jpg') no-repeat center center fixed; 
+	background: url('images/work_3000.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+	    @media(max-width: 1500px) {
+    	background: url('images/work_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1500px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/work_3000.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px) {
+    	background: url('images/work_1000.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
+    @media(max-width: 1000px),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi) {
+    	background: url('images/work_1500.jpg') no-repeat center center fixed;
+    	-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+    }
   & .nav {
   	&--subpage { 
 	    &:hover {
@@ -366,6 +565,24 @@ nav {
 			&:visited {
 				color: @work-color;
 			}
+		}
+	}
+	&__item {
+
+	}
+}
+
+
+.image {
+	&__single {
+		overflow: hidden;
+		width: 6rem;
+		height: 6rem;
+		& img {
+			object-fit: cover;
+		    object-position: 50% 50%;
+		    height: 6rem;
+		    width: 6rem;
 		}
 	}
 }
