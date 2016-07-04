@@ -29,8 +29,12 @@
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+html {
+  height: 100%;
+}
 body {
   width: 100%;
+  height: 100%;
   font-size: 1.1rem;
   font-family: 'Open-Sans';
   background-color: #000;
@@ -119,6 +123,7 @@ footer {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
   }
 }
 @media (max-width: 1500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
@@ -127,6 +132,7 @@ footer {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
   }
 }
 @media (max-width: 1000px) {
@@ -135,6 +141,7 @@ footer {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
   }
 }
 @media (max-width: 1000px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
@@ -143,6 +150,7 @@ footer {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
   }
 }
 .homepage .name {
@@ -152,7 +160,7 @@ footer {
   margin-top: 2.5rem;
   padding-bottom: .7rem;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 600;
   font-family: 'Myriad Pro Semibold';
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
